@@ -15,13 +15,14 @@ print
 8.Sevilla
 
 """
+
 ciudades = {1:"Almeria",2:"Cadiz",3:"Cordoba",4:"Granada",5:"Huelva",6:"Jaen",7:"Malaga",8:"Sevilla"} 
 ciudad = raw_input ("De que ciudad quieres saber la temperatura actual?: ")
 
-Resultado = requests.get('http://api.openweathermap.org/data/2.5/weather'),params={'q':"%:,spain"%ciudades[ciudad]}
-direccion = json.loads(respuesta.text)
+resultado = requests.get('http://api.openweathermap.org/data/2.5/weather'),params={'q':"s%,spain" % (ciudades[ciudad])}
+direccion = json.loads(resultado.text)
 
-temp = direccion["main"]["temp"]
-grados = temp -273
+temperatura = direccion["main"]["temp"]
+grados = temperatura - 273
 
 print "La temperatura actual en %s es de %s ºC" % (ciudades[ciudad],grados)
