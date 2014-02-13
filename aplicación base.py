@@ -25,4 +25,4 @@ direccion = json.loads(resultado.text)
 temperatura = direccion["main"]["temp"]
 grados = temperatura - 273
 
-print "La temperatura actual en %s es de %s ºC" % (ciudades[ciudad],grados)
+print "La temperatura actual en %s es de %s C" % (ciudades[ciudad],grados)
